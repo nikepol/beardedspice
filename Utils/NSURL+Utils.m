@@ -1,6 +1,6 @@
 //
 //  NSURL+Utils.m
-//  BeardedSpice
+//  Beardie
 //
 //  Created by Roman Sokolov on 04.05.15.
 //  Copyright (c) 2015 Tyler Rhodes / Jose Falcon. All rights reserved.
@@ -74,7 +74,7 @@ static inline NSString *appSupportPath() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
       NSString *pathString = [NSString
-          stringWithFormat:@"%@/BeardedSpice/Strategies/", appSupportPath()];
+          stringWithFormat:@"%@/Beardie/Strategies/", appSupportPath()];
       result = [NSURL fileURLWithPath:pathString isDirectory:YES];
     });
     return result;
@@ -86,7 +86,7 @@ static inline NSString *appSupportPath() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
       NSString *pathString =
-          [NSString stringWithFormat:@"%@/BeardedSpice/CustomStrategies/",
+          [NSString stringWithFormat:@"%@/Beardie/CustomStrategies/",
                                      appSupportPath()];
       result = [NSURL fileURLWithPath:pathString isDirectory:YES];
     });

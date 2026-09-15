@@ -12,8 +12,8 @@ if [ -d "$dir" ]; then
 fi
 
 # set up your app name, version number, and background image file name
-APP_NAME="BeardedSpice"
-VERSION="0.1.0"
+APP_NAME="Beardie"
+VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Beardie/Beardie-Info.plist)
 
 # you should not need to change these
 APP_EXE="${APP_NAME}.app/Contents/MacOS/${APP_NAME}"
@@ -23,7 +23,7 @@ DMG_TMP="${VOL_NAME}-temp.dmg"
 DMG_FINAL="${VOL_NAME}.dmg"         # final DMG name will be "SuperCoolApp-1.0.0.dmg"
 
 CWD=`pwd`
-RESOURCE_DIR="${CWD}/BeardedSpice"
+RESOURCE_DIR="${CWD}/Beardie"
 BUILD_DIR="${CWD}/build/Release"
 STAGING_DIR="${CWD}/build/packaged"      # we copy all our stuff into this dir
 
@@ -36,7 +36,7 @@ rm -rf "${STAGING_DIR}" "${DMG_TMP}" "${DMG_FINAL}"
 echo 'Building.'
 # build the project
 
-xcodebuild -workspace BeardedSpice.xcworkspace -scheme BeardedSpice -configuration Release
+xcodebuild -workspace Beardie.xcworkspace -scheme Beardie -configuration Release
 
 echo 'Copying to staging directory.'
 # copy over the stuff we want in the final disk image to our staging dir

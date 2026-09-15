@@ -1,6 +1,6 @@
 //
 //  NSURL+Utils.h
-//  BeardedSpice
+//  Beardie
 //
 //  Created by Roman Sokolov on 04.05.15.
 //  Copyright (c) 2015 Tyler Rhodes / Jose Falcon. All rights reserved.
@@ -32,7 +32,7 @@
 + (NSURL * _Nonnull)URLForCustomStrategies;
 
 /**
- Path to the BeardedSpice bundle strategy folder.
+ Path to the Beardie bundle strategy folder.
  */
 + (NSURL * _Nonnull)URLForBundleStrategies;
 

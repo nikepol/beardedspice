@@ -1,6 +1,6 @@
 //
 //  NewStrategyName.js
-//  BeardedSpice
+//  Beardie
 //
 //  Created by You on Today's Date.
 //  Copyright (c) 2015-2019 GPL v3 http://www.gnu.org/licenses/gpl.html

@@ -1,0 +1,76 @@
+{
+  "fill": {
+    "linear-gradient": [
+      "srgb:1.000000,0.768627,0.372549,1.000000",
+      "srgb:0.976471,0.509804,0.011765,1.000000"
+    ]
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "headphones.png",
+          "name": "Headphones",
+          "fill": {
+            "solid": "srgb:1.000000,1.000000,1.000000,1.000000"
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    },
+    {
+      "layers": [
+        {
+          "image-name": "glasses.png",
+          "name": "Glasses",
+          "fill": {
+            "solid": "srgb:1.000000,1.000000,1.000000,1.000000"
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    },
+    {
+      "layers": [
+        {
+          "image-name": "beard.png",
+          "name": "Beard",
+          "fill": {
+            "solid": "srgb:1.000000,1.000000,1.000000,1.000000"
+          }
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    }
+  ],
+  "supported-platforms": {
+    "circles": [
+      "watchOS"
+    ],
+    "squares": [
+      "iOS",
+      "macOS"
+    ]
+  }
+}
