@@ -1,0 +1,457 @@
+README.md
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 13,16,19,26,37,40,43,50,55,60,63,176,178,180
+Beardie.xcodeproj/project.pbxproj
+  s_255d0e5e9ed1f1::t_f7584dc219004e 10,31,34,68,70,100-101,121,128,149,157,185-186,188,191-193,253-257,306-308,311,316,318,323,325,328,341,355,366,477-478,483,487-488,494,552-554,568-570,587-589,604,643,649-651,653,660,670,676,684-689,697,699,711-713,716,718,733-735,738,740,753-755,765,775,787-789,811-812,840,851,865,883,896,907,916,925,939,966,1048,1053,1104,1114,1116,1124,1134,1136,1177,1215,1222,1234-1235,1237-1238,1245,1257-1258,1260-1261,1268,1280-1281,1283-1284,1292,1304-1305,1307-1308,1316,1325,1334,1343
+  s_255d0e5e9ed1f1::t_284fddc1214c74 108,322,640,807,1224,1247
+template-explained.js
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3
+Utils/NSString+Utils.h
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3
+SharedComponents/BSSharedDefaults.m
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,6,11,13-21
+Beardie/Beardie.icon/icon.json
+  s_255d0e5e9ed1f1::t_7734cc4727b2c6 75
+  s_255d0e5e9ed1f1::t_4c51472dfcb40d 1,4-7,9,11,17-18,22,26-28,30,36-37,41,45-47,49,55-56,60,64-66,69-70,72-74
+  s_255d0e5e9ed1f1::t_dddc0f9c884ca5 2-3,8,10,12,19-21,23-25,29,31,38-40,42-44,48,50,57-59,61-63,67-68,71
+  s_255d0e5e9ed1f1::t_4fe41fa8bfdd84 13-14,32-33,51-52
+  s_255d0e5e9ed1f1::t_23d9ab90515551 15-16,34-35,53-54,76
+Podfile
+  s_255d0e5e9ed1f1::t_d3a902bb210d79 22-30
+  s_255d0e5e9ed1f1::t_49708763fb8280 1
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 2,6,9,14
+Utils/NSString+Utils.m
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3
+Utils/BSTimeout.h
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,6
+SharedComponents/BSSharedDefaults.h
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,6,11-19
+uninstall.sh
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 4,6-8,14
+Utils/NSURL+Utils.h
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,35
+Utils/BSTimeout.m
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,6
+Utils/NSURL+Utils.m
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 3,77,89
+.travis.yml
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 12
+release.sh
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 15-16,26,39
+docs/developers-guide-web.md
+  s_255d0e5e9ed1f1::t_7cb99a3a5792f4 13,15,25
+  s_255d0e5e9ed1f1::t_9db27e0280706d 28
+Beardie/Tabs/QuodLibetTabAdapter.m
+  s_255d0e5e9ed1f1::t_8c912aa42251b2 3,357
+Beardie.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+  s_255d0e5e9ed1f1::t_c6e0735e6c5aaf 5
+Beardie.xcodeproj/xcshareddata/xcschemes/Beardie.xcscheme
+  s_255d0e5e9ed1f1::t_75ec33346ec6d3 18-20,32-34,50-52,60-62,83-85,102-104
+Beardie.xcworkspace/contents.xcworkspacedata
+  s_255d0e5e9ed1f1::t_dd70988492fc24 8
+Beardie/AppDelegate.h
+  s_255d0e5e9ed1f1::t_d1bc21e8833830 3,17,29
+Beardie/AppDelegate.m
+  s_255d0e5e9ed1f1::t_a73f0cf2c2fecd 3,18,74,79,103,107,116,188,265,297,329,929-930,1043,1169,1171,1174,1176,1179,1181,1184,1186,1189,1191,1194,1196,1199,1201,1204,1206,1209,1211,1214,1216,1225,1228,1231,1234,1237,1240,1243,1246,1249,1252,1255,1258,1261,1264,1267,1270,1273,1276,1290-1291,1293,1324,1326,1329,1331,1334,1336,1339,1341,1344,1346,1349,1351,1354,1356,1359,1361,1364,1366,1393,1400
+Beardie/BSActiveTab.h
+  s_255d0e5e9ed1f1::t_4f271973ec9e01 3,31
+Beardie/BSActiveTab.m
+  s_255d0e5e9ed1f1::t_6cc9ca851f943a 3,20
+Beardie/BSAppleScriptSupport.m
+  s_255d0e5e9ed1f1::t_5bd230e40ee554 3
+Beardie/BSCustomStrategyManager.h
+  s_255d0e5e9ed1f1::t_efe8d6aab99758 3,6
+Beardie/BSCustomStrategyManager.m
+  s_255d0e5e9ed1f1::t_1019a6203db9fc 3,6
+Beardie/BSLaunchAtLogin.h
+  s_255d0e5e9ed1f1::t_6eb0eb6fa9a16d 3,6
+Beardie/BSLaunchAtLogin.m
+  s_255d0e5e9ed1f1::t_28c1dec6f89519 3,6
+Beardie/BSMediaStrategy.h
+  s_255d0e5e9ed1f1::t_318009f6d34a3b 3
+Beardie/BSMediaStrategy.m
+  s_255d0e5e9ed1f1::t_a2b046e45a7b5f 3
+Beardie/BSStrategyCache.h
+  s_255d0e5e9ed1f1::t_848980cee8aa83 3
+Beardie/BSStrategyCache.m
+  s_255d0e5e9ed1f1::t_aaab2186f6f640 3,30
+Beardie/BSStrategyVersionManager.h
+  s_255d0e5e9ed1f1::t_30c0d03ef91ad9 3
+Beardie/BSStrategyVersionManager.m
+  s_255d0e5e9ed1f1::t_735d99a840d422 3,16
+Beardie/BSTrack.h
+  s_255d0e5e9ed1f1::t_eb527d8b0b01f5 3
+Beardie/BSTrack.m
+  s_255d0e5e9ed1f1::t_bea12f98bdc089 3,82
+Beardie/BSVolumeControlProtocol.h
+  s_255d0e5e9ed1f1::t_71ba250535e088 3
+Beardie/Base.lproj/MainMenu.xib
+  s_255d0e5e9ed1f1::t_501aa9723e34a5 20-21,23,46,71,125
+Beardie/Beardie-Info.plist
+  s_255d0e5e9ed1f1::t_8f3410a0c179eb 17,22,56,60,73,79,88,92
+Beardie/BeardieUserDefaults.plist
+  s_255d0e5e9ed1f1::t_686e2822f8b801 5,7,9,11,13,15,17,19
+Beardie/Config.xcconfig
+  s_255d0e5e9ed1f1::t_c3c803a7c2055a 3,6
+Beardie/Debug-Config.xcconfig
+  s_255d0e5e9ed1f1::t_7a1f2e8d6f4c66 3,6,10
+Beardie/MediaStrategies/AmazonMusic.js
+  s_255d0e5e9ed1f1::t_0d4bc5ec6a0bfa 3
+Beardie/MediaStrategies/Anghami.js
+  s_255d0e5e9ed1f1::t_66a6cb44e0fe04 3
+Beardie/MediaStrategies/AppleDeveloper.js
+  s_255d0e5e9ed1f1::t_84da7a3f285228 3,6
+Beardie/MediaStrategies/Audible.js
+  s_255d0e5e9ed1f1::t_60c99d706f7f92 3
+Beardie/MediaStrategies/AudioMack.js
+  s_255d0e5e9ed1f1::t_371f343150a2c2 3
+Beardie/MediaStrategies/BBCRadio.js
+  s_255d0e5e9ed1f1::t_8de032a4587d9f 3
+Beardie/MediaStrategies/BBCRadioProgrammes.js
+  s_255d0e5e9ed1f1::t_d0a0d02cd3c40c 3
+Beardie/MediaStrategies/BE-AT.TV.js
+  s_255d0e5e9ed1f1::t_d4f62814408ebb 3
+Beardie/MediaStrategies/BandCamp.js
+  s_255d0e5e9ed1f1::t_7a1b999a2be3bb 3
+Beardie/MediaStrategies/BandCampWhiteLabel.js
+  s_255d0e5e9ed1f1::t_34369b34c139c5 3
+Beardie/MediaStrategies/Beatguide.js
+  s_255d0e5e9ed1f1::t_4f312ced2d1b11 3
+Beardie/MediaStrategies/Beatport.js
+  s_255d0e5e9ed1f1::t_37513972afa10d 2
+Beardie/MediaStrategies/Blitzr.js
+  s_255d0e5e9ed1f1::t_00dfb77570b1d7 3,6
+Beardie/MediaStrategies/BrainFm.js
+  s_255d0e5e9ed1f1::t_07ba92f88d3f93 3
+Beardie/MediaStrategies/BugsMusic.js
+  s_255d0e5e9ed1f1::t_7b0598e2715715 3,6
+Beardie/MediaStrategies/Chorus.js
+  s_255d0e5e9ed1f1::t_09a605c838d420 3
+Beardie/MediaStrategies/Composed.js
+  s_255d0e5e9ed1f1::t_a38931e72b1e7f 3,6
+Beardie/MediaStrategies/Coursera.js
+  s_255d0e5e9ed1f1::t_aaf7a9dee8d443 3,6
+Beardie/MediaStrategies/CozyCloud.js
+  s_255d0e5e9ed1f1::t_386b16655f8623 3
+Beardie/MediaStrategies/Deezer.js
+  s_255d0e5e9ed1f1::t_6ba81699b816e1 3
+Beardie/MediaStrategies/DigitallyImported.js
+  s_255d0e5e9ed1f1::t_ac24e05e4310da 3
+Beardie/MediaStrategies/Eggheadio.js
+  s_255d0e5e9ed1f1::t_f2bb763cb79b50 3
+Beardie/MediaStrategies/EightTracks.js
+  s_255d0e5e9ed1f1::t_74596596a9fa80 3
+Beardie/MediaStrategies/Fip.js
+  s_255d0e5e9ed1f1::t_80bd3772536b37 3
+Beardie/MediaStrategies/FocusAtWill.js
+  s_255d0e5e9ed1f1::t_5deb694ff50131 3
+Beardie/MediaStrategies/FocusMusicFM.js
+  s_255d0e5e9ed1f1::t_f1933a1eb418ba 3
+Beardie/MediaStrategies/Gaana.js
+  s_255d0e5e9ed1f1::t_47f59c27f8acde 3
+Beardie/MediaStrategies/GenieMusic.js
+  s_255d0e5e9ed1f1::t_c953e06d19ab9c 3
+Beardie/MediaStrategies/GoogleMusic.js
+  s_255d0e5e9ed1f1::t_2b2dcca962823f 3
+Beardie/MediaStrategies/GrooveShark.js
+  s_255d0e5e9ed1f1::t_5166438cdfb4c8 3
+Beardie/MediaStrategies/HotNewHipHop.js
+  s_255d0e5e9ed1f1::t_aa34ecbd55880e 3,6
+Beardie/MediaStrategies/Hungama.js
+  s_255d0e5e9ed1f1::t_552bc0933b03d3 3
+Beardie/MediaStrategies/HypeMachine.js
+  s_255d0e5e9ed1f1::t_a241b1959b3fff 3
+Beardie/MediaStrategies/IndieShuffle.js
+  s_255d0e5e9ed1f1::t_fc642238ef53e8 3
+Beardie/MediaStrategies/Jango.js
+  s_255d0e5e9ed1f1::t_7c87ae10a53bef 3,6
+Beardie/MediaStrategies/KCRW.js
+  s_255d0e5e9ed1f1::t_aa4a2730702c23 3
+Beardie/MediaStrategies/KollektFm.js
+  s_255d0e5e9ed1f1::t_de46570033ee02 3
+Beardie/MediaStrategies/Laracasts.js
+  s_255d0e5e9ed1f1::t_e1ab7a6d7cd2e8 3
+Beardie/MediaStrategies/LastFm.js
+  s_255d0e5e9ed1f1::t_c0684cd123119b 3
+Beardie/MediaStrategies/LeTournedisque.js
+  s_255d0e5e9ed1f1::t_ba2c7bd226c1c6 3
+Beardie/MediaStrategies/ListenMoe.js
+  s_255d0e5e9ed1f1::t_7e7313c3771414 3
+Beardie/MediaStrategies/ListenOnRepeat.js
+  s_255d0e5e9ed1f1::t_60f907445c6655 3
+Beardie/MediaStrategies/ListenersPlaylist.js
+  s_255d0e5e9ed1f1::t_4af16644575ac5 3
+Beardie/MediaStrategies/LogitechMediaServer.js
+  s_255d0e5e9ed1f1::t_18b55d5ea958d8 3
+Beardie/MediaStrategies/Lynda.js
+  s_255d0e5e9ed1f1::t_b743ee4d4348c1 3
+Beardie/MediaStrategies/Madsonic.js
+  s_255d0e5e9ed1f1::t_76216b243e142d 3
+Beardie/MediaStrategies/MixCloud.js
+  s_255d0e5e9ed1f1::t_40e275030c01b0 3
+Beardie/MediaStrategies/MusicForProgramming.js
+  s_255d0e5e9ed1f1::t_0d537b1ecc5158 3
+Beardie/MediaStrategies/MusicUnlimited.js
+  s_255d0e5e9ed1f1::t_77a1c6e222ecd0 3
+Beardie/MediaStrategies/NPR.js
+  s_255d0e5e9ed1f1::t_79dd5135e8c09b 3
+Beardie/MediaStrategies/NPROne.js
+  s_255d0e5e9ed1f1::t_30cd507a8cb5ec 3
+Beardie/MediaStrategies/NRK.js
+  s_255d0e5e9ed1f1::t_8781b92681bdf5 3
+Beardie/MediaStrategies/Napster.js
+  s_255d0e5e9ed1f1::t_86fe174cf73640 3,6
+Beardie/MediaStrategies/Netflix.js
+  s_255d0e5e9ed1f1::t_ef9cca8e43e2fc 3
+Beardie/MediaStrategies/NoAdRadio.js
+  s_255d0e5e9ed1f1::t_15ecc67f45e0ef 3
+Beardie/MediaStrategies/NoonPacific.js
+  s_255d0e5e9ed1f1::t_b1cf07b80aba46 3
+Beardie/MediaStrategies/Odnoklassniki.js
+  s_255d0e5e9ed1f1::t_96ed58b10fd521 3
+Beardie/MediaStrategies/Overcast.js
+  s_255d0e5e9ed1f1::t_798f964e827c3d 3
+Beardie/MediaStrategies/Pakartot.js
+  s_255d0e5e9ed1f1::t_ccc6da357947d2 3
+Beardie/MediaStrategies/Pandora.js
+  s_255d0e5e9ed1f1::t_45f4fb23f0d26c 3
+Beardie/MediaStrategies/PhishIn.js
+  s_255d0e5e9ed1f1::t_937f41a4bfcf67 3
+Beardie/MediaStrategies/PhishTracks.js
+  s_255d0e5e9ed1f1::t_cf343a3abc5327 3
+Beardie/MediaStrategies/PinchyDon.js
+  s_255d0e5e9ed1f1::t_09ebb5db093d78 3
+Beardie/MediaStrategies/PlexWeb.js
+  s_255d0e5e9ed1f1::t_b6074bcc84a898 3,6
+Beardie/MediaStrategies/PocketCasts.js
+  s_255d0e5e9ed1f1::t_e6c9b372ed88e9 3
+Beardie/MediaStrategies/PoolsideFM.js
+  s_255d0e5e9ed1f1::t_f5b06dbf3f83a1 3
+Beardie/MediaStrategies/ProductHunt.js
+  s_255d0e5e9ed1f1::t_c72805f0801a5d 3
+Beardie/MediaStrategies/Qobuz.js
+  s_255d0e5e9ed1f1::t_bbc092d1a18418 3,6
+Beardie/MediaStrategies/Rdio.js
+  s_255d0e5e9ed1f1::t_0eb1f3183e1f98 3
+Beardie/MediaStrategies/RedditMusic.js
+  s_255d0e5e9ed1f1::t_bf03550a49c8ca 3
+Beardie/MediaStrategies/Saavn.js
+  s_255d0e5e9ed1f1::t_118516a9345777 3
+Beardie/MediaStrategies/ShufflerFm.js
+  s_255d0e5e9ed1f1::t_3b1fea8a361d84 3
+Beardie/MediaStrategies/SiriusXM.js
+  s_255d0e5e9ed1f1::t_ecf1c92ff389c4 3
+Beardie/MediaStrategies/Slacker.js
+  s_255d0e5e9ed1f1::t_2f5e1572d554a5 3
+Beardie/MediaStrategies/SomaFm.js
+  s_255d0e5e9ed1f1::t_3d7aeb4c1981f8 3
+Beardie/MediaStrategies/Songza.js
+  s_255d0e5e9ed1f1::t_1625fbd697d308 3
+Beardie/MediaStrategies/SoundCloud.js
+  s_255d0e5e9ed1f1::t_1fcc04891ebf6f 3
+Beardie/MediaStrategies/Spotify.js
+  s_255d0e5e9ed1f1::t_56b2d12ca84cec 3
+Beardie/MediaStrategies/Stingray.js
+  s_255d0e5e9ed1f1::t_1162bcb857f518 3
+Beardie/MediaStrategies/Stitcher.js
+  s_255d0e5e9ed1f1::t_870e259fe1398e 3
+Beardie/MediaStrategies/Stripewaves.js
+  s_255d0e5e9ed1f1::t_a5011d333990ac 3
+Beardie/MediaStrategies/StyleJukebox.js
+  s_255d0e5e9ed1f1::t_9f58abafd29058 3
+Beardie/MediaStrategies/Subsonic.js
+  s_255d0e5e9ed1f1::t_b784a0e1ab1eff 3
+Beardie/MediaStrategies/Synology.js
+  s_255d0e5e9ed1f1::t_54324a684d003d 3
+Beardie/MediaStrategies/TTMuzik.js
+  s_255d0e5e9ed1f1::t_a747f60c6532bb 3,6
+Beardie/MediaStrategies/TuneIn.js
+  s_255d0e5e9ed1f1::t_f444eefaad4a5d 3
+Beardie/MediaStrategies/TwentyTwoTracks.js
+  s_255d0e5e9ed1f1::t_2c1f88ce54641c 3
+Beardie/MediaStrategies/Twitch.js
+  s_255d0e5e9ed1f1::t_8482d1110cc9cb 3
+Beardie/MediaStrategies/Udemy.js
+  s_255d0e5e9ed1f1::t_7bd43be2dc3c0b 3,7
+Beardie/MediaStrategies/Vessel.js
+  s_255d0e5e9ed1f1::t_a2e9486eed6390 3,6
+Beardie/MediaStrategies/Vimeo.js
+  s_255d0e5e9ed1f1::t_5e00cd37b68870 3
+Beardie/MediaStrategies/Vk.js
+  s_255d0e5e9ed1f1::t_4515aa34de647c 3
+Beardie/MediaStrategies/WatchaPlay.js
+  s_255d0e5e9ed1f1::t_b5cb8563a0c217 3,6
+Beardie/MediaStrategies/WonderFm.js
+  s_255d0e5e9ed1f1::t_2c842982d2094e 3
+Beardie/MediaStrategies/XboxMusic.js
+  s_255d0e5e9ed1f1::t_0aebcb9e280562 3
+Beardie/MediaStrategies/Xiami.js
+  s_255d0e5e9ed1f1::t_83063d98673dff 3
+Beardie/MediaStrategies/YandexMusic.js
+  s_255d0e5e9ed1f1::t_63b2e5959334d4 3
+Beardie/MediaStrategies/YandexRadio.js
+  s_255d0e5e9ed1f1::t_57bae18a44f767 3
+Beardie/MediaStrategies/YouTube.js
+  s_255d0e5e9ed1f1::t_0794df8d3cd33f 3
+Beardie/MediaStrategies/YouTubeMusic.js
+  s_255d0e5e9ed1f1::t_052888f32d35cd 3
+Beardie/MediaStrategies/Zing.js
+  s_255d0e5e9ed1f1::t_0beb62537e903b 3
+Beardie/MediaStrategies/Zvooq.js
+  s_255d0e5e9ed1f1::t_0785dee19d7761 3
+Beardie/MediaStrategies/iHeartRadio.js
+  s_255d0e5e9ed1f1::t_877a6dfba0b65a 3,6
+Beardie/MediaStrategyRegistry.h
+  s_255d0e5e9ed1f1::t_e16c7d23d5db01 3
+Beardie/MediaStrategyRegistry.m
+  s_255d0e5e9ed1f1::t_c22f126c4ed01c 3
+Beardie/NativeAppTabRegistry.h
+  s_255d0e5e9ed1f1::t_29a646f17d682c 3
+Beardie/NativeAppTabRegistry.m
+  s_255d0e5e9ed1f1::t_6dda3a35d80ca4 3
+Beardie/Preferences/BSMediaStrategyEnableButton.h
+  s_255d0e5e9ed1f1::t_29d045825a51d1 3,6
+Beardie/Preferences/BSMediaStrategyEnableButton.m
+  s_255d0e5e9ed1f1::t_a402356b3044e1 3,6
+Beardie/Preferences/BSPreferencesWindowController.h
+  s_255d0e5e9ed1f1::t_f2507b93d7d5c4 3,6
+Beardie/Preferences/BSPreferencesWindowController.m
+  s_255d0e5e9ed1f1::t_693f4ad5b2944d 3,6
+Beardie/Preferences/BSShortcutView.h
+  s_255d0e5e9ed1f1::t_3f31c2ad543833 3,6
+Beardie/Preferences/BSShortcutView.m
+  s_255d0e5e9ed1f1::t_2ed7797855f57f 3,6
+Beardie/Preferences/BSStrategiesPreferencesViewController.h
+  s_255d0e5e9ed1f1::t_6f6a3f5328cbd8 3,21-22,24
+Beardie/Preferences/BSStrategiesPreferencesViewController.m
+  s_255d0e5e9ed1f1::t_9b1783c24a59f6 3,23-25,107,124,155,171,428,440,465,478,493,507
+Beardie/Preferences/Base.lproj/GeneralPreferencesView.xib
+  s_255d0e5e9ed1f1::t_79a8dc3b551eb1 28,45,55,70,89,106,116,130,140,155
+Beardie/Preferences/GeneralPreferencesViewController.h
+  s_255d0e5e9ed1f1::t_e7d46fd413f94c 3,24-30
+Beardie/Preferences/GeneralPreferencesViewController.m
+  s_255d0e5e9ed1f1::t_b038d5b331a235 3,26-32,80,119
+Beardie/Preferences/MediaControllerObject.h
+  s_255d0e5e9ed1f1::t_24f5a7fe5819a1 3
+Beardie/Preferences/MediaControllerObject.m
+  s_255d0e5e9ed1f1::t_031ebb5a44fae5 3
+Beardie/Preferences/ShortcutsPreferencesViewController.h
+  s_255d0e5e9ed1f1::t_1761f1e48790ef 3
+Beardie/Preferences/ShortcutsPreferencesViewController.m
+  s_255d0e5e9ed1f1::t_e7ebf3176b0b0e 3,25-33
+Beardie/Tabs/AirfoilSatelliteTabAdapter.h
+  s_255d0e5e9ed1f1::t_c03cc4356849e1 3
+Beardie/Tabs/AirfoilSatelliteTabAdapter.m
+  s_255d0e5e9ed1f1::t_71586801e64170 3,196
+Beardie/Tabs/AmazonMusicTabAdapter.h
+  s_255d0e5e9ed1f1::t_bbec2b029bf752 3
+Beardie/Tabs/AmazonMusicTabAdapter.m
+  s_255d0e5e9ed1f1::t_7f26b7f4c817fb 3
+Beardie/Tabs/ChromeTabAdapter.h
+  s_255d0e5e9ed1f1::t_9281067f382a0c 3
+Beardie/Tabs/ChromeTabAdapter.m
+  s_255d0e5e9ed1f1::t_55750636133d29 3,16
+Beardie/Tabs/DowncastTabAdapter.h
+  s_255d0e5e9ed1f1::t_ea408be7f50c02 3,6
+Beardie/Tabs/DowncastTabAdapter.m
+  s_255d0e5e9ed1f1::t_8009032b8ee93a 3,6
+Beardie/Tabs/NativeAppTabAdapter.h
+  s_255d0e5e9ed1f1::t_9a1195ccbffc76 3,41
+Beardie/Tabs/NativeAppTabAdapter.m
+  s_255d0e5e9ed1f1::t_2646aca633490d 3
+Beardie/Tabs/QuodLibetTabAdapter.h
+  s_255d0e5e9ed1f1::t_11cfc72ba63f2f 3
+Beardie/Tabs/SafariTabAdapter.h
+  s_255d0e5e9ed1f1::t_b4cfdcad807162 3
+Beardie/Tabs/SafariTabAdapter.m
+  s_255d0e5e9ed1f1::t_9a5d2e0c6610ed 3
+Beardie/Tabs/SpotifyTabAdapter.h
+  s_255d0e5e9ed1f1::t_fb4b6591712dce 3
+Beardie/Tabs/SpotifyTabAdapter.m
+  s_255d0e5e9ed1f1::t_7176fa7f59e491 3
+Beardie/Tabs/TabAdapter.h
+  s_255d0e5e9ed1f1::t_75e86490493c0e 3
+Beardie/Tabs/TabAdapter.m
+  s_255d0e5e9ed1f1::t_6cf169150a57d9 3,14
+Beardie/Tabs/TidalTabAdapter.h
+  s_255d0e5e9ed1f1::t_2e9f33e52ea2ce 3
+Beardie/Tabs/TidalTabAdapter.m
+  s_255d0e5e9ed1f1::t_c83aaa39b32b6a 3
+Beardie/Tabs/VLCTabAdapter.h
+  s_255d0e5e9ed1f1::t_dfa8a662eb49cb 3
+Beardie/Tabs/VLCTabAdapter.m
+  s_255d0e5e9ed1f1::t_6f1724d9b545d3 3
+Beardie/Tabs/VOXTabAdapter.h
+  s_255d0e5e9ed1f1::t_26f65200004789 3
+Beardie/Tabs/VOXTabAdapter.m
+  s_255d0e5e9ed1f1::t_a1d52f44275771 3
+Beardie/Tabs/iTunesTabAdapter.h
+  s_255d0e5e9ed1f1::t_fbc11d6492b0ec 3
+Beardie/Tabs/iTunesTabAdapter.m
+  s_255d0e5e9ed1f1::t_c7e1129acabf24 3
+Beardie/UI/BSVolumeWindowController.h
+  s_255d0e5e9ed1f1::t_1fd757502b4640 3
+Beardie/UI/BSVolumeWindowController.m
+  s_255d0e5e9ed1f1::t_3d8d11661585a0 3,61
+Beardie/UI/BSVolumeWindowController.xib
+  s_255d0e5e9ed1f1::t_13a10bc11beac6 42
+Beardie/main.m
+  s_255d0e5e9ed1f1::t_0734c25c1076f9 3
+Beardie/runningSBApplication.h
+  s_255d0e5e9ed1f1::t_1d50e30f74269d 3
+Beardie/runningSBApplication.m
+  s_255d0e5e9ed1f1::t_f5cc685972fafc 3
+BeardieControllers/BSCService.h
+  s_255d0e5e9ed1f1::t_8a4ba60c37bec8 3,6
+BeardieControllers/BSCService.m
+  s_255d0e5e9ed1f1::t_483d3986781039 3,6,11,60,458,466,474,482,492,500,510,520,530,552
+BeardieControllers/BeardieControllers.h
+  s_255d0e5e9ed1f1::t_9588bb031afeeb 2-3,6,10,13
+BeardieControllers/BeardieControllers.m
+  s_255d0e5e9ed1f1::t_4c75be54895f53 2-3,6,9,12
+BeardieControllers/Controllers/BSCShortcutMonitor.h
+  s_255d0e5e9ed1f1::t_1316a343080304 3,6
+BeardieControllers/Controllers/BSCShortcutMonitor.m
+  s_255d0e5e9ed1f1::t_4c719c087700c9 3,6
+BeardieControllers/Controllers/BSHeadphoneStatusListener.h
+  s_255d0e5e9ed1f1::t_516fd31038834f 3,6
+BeardieControllers/Controllers/BSHeadphoneStatusListener.m
+  s_255d0e5e9ed1f1::t_caaccdd8daf3ec 3,6
+BeardieControllers/Controllers/SPMediaKeyTap/SPMediaKeyTap.m
+  s_255d0e5e9ed1f1::t_c5a68540a7e1c2 156
+BeardieControllers/Info.plist
+  s_255d0e5e9ed1f1::t_0b270fa396f0c9 8,26
+BeardieControllers/main.m
+  s_255d0e5e9ed1f1::t_19e8ea76b7c0e8 3,6,10-11,24,27,32
+BeardieTests/BSMediaStrategyTests.m
+  s_255d0e5e9ed1f1::t_481f43346727bc 3
+BeardieTests/BSStrategyMockObject.h
+  s_255d0e5e9ed1f1::t_b1604ad09d6ecb 3
+BeardieTests/BSStrategyMockObject.m
+  s_255d0e5e9ed1f1::t_150520759110f3 3,93,129,134,136
+BeardieTests/BSStrategyTests.m
+  s_255d0e5e9ed1f1::t_44132a004b168c 3
+BeardieTests/BSTrackTests.m
+  s_255d0e5e9ed1f1::t_b2679f6f0b6f3e 3
+Podfile.lock
+  s_255d0e5e9ed1f1::t_2604584eb5c0eb 18,32,34
+SharedComponents/BeardieControllersProtocol.h
+  s_255d0e5e9ed1f1::t_00fac0fe9ad4fb 2-3,6,14,31
+SharedComponents/BeardieHostAppProtocol.h
+  s_255d0e5e9ed1f1::t_05fd01253de68e 2-3,6,11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "716d439365c19d6511012425c1fb15f290482d9a",
+  "prompts": {},
+  "sessions": {
+    "s_255d0e5e9ed1f1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "83c3a9e4-9883-428a-87c0-2e3df3e04ca0",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Nikita Polyakov <nikepol@me.com>"
+    }
+  }
+}
