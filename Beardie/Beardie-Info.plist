@@ -91,7 +91,7 @@
 			<key>UTTypeIdentifier</key>
 			<string>com.beardie.bsstrategy</string>
 			<key>UTTypeReferenceURL</key>
-			<string>http://beardedspice.github.io</string>
+			<string>https://nikepol.github.io/beardie</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

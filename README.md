@@ -6,6 +6,8 @@ Beardie is a fork of [BeardedSpice](https://github.com/beardedspice/beardedspice
 
 Media strategies are still fetched from the upstream repository, so support for new sites lands here automatically.
 
+Site: [nikepol.github.io/beardie](https://nikepol.github.io/beardie)
+
 # Common Issues
 
 Check the upstream [Wiki](https://github.com/beardedspice/beardedspice/wiki) before opening an issue — most of it still applies.
