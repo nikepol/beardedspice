@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beardie — media keys for whatever is playing</title>
+<meta name="description" content="A macOS menu-bar app that sends the media keys to the browser tab or app that is actually playing, instead of to Apple Music.">
+<link rel="icon" href="assets/icon-256.png">
+<meta property="og:title" content="Beardie">
+<meta property="og:description" content="Your media keys, pointed at whatever is actually playing.">
+<meta property="og:image" content="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* aluminium keyboard */
+    --deck:#e9eaec;
+    --deck-edge:#c9ccd1;
+    --cap:#fbfbfc;
+    --cap-edge:#d3d6db;
+    --legend:#2b2e33;
+    --legend-soft:#6b7078;
+    --rule:#d5d8dd;
+    --accent:#f98203;
+    --accent-deep:#c56400;
+    --surface:#fff;
+    --shadow:rgba(28,31,36,.18);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --deck:#17181b;
+      --deck-edge:#0d0e10;
+      --cap:#2a2c31;
+      --cap-edge:#191b1f;
+      --legend:#e7e9ec;
+      --legend-soft:#9aa0a8;
+      --rule:#2e3136;
+      --accent:#ffa233;
+      --accent-deep:#ffc45f;
+      --surface:#1d1f23;
+      --shadow:rgba(0,0,0,.5);
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--deck);
+    color:var(--legend);
+    font:400 17px/1.65 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);
+  }
+  .wrap{max-width:62rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+
+  /* ---- masthead ---- */
+  header{display:flex;align-items:center;gap:.85rem;padding:2rem 0 0}
+  header img{width:40px;height:40px;border-radius:9px}
+  header b{font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
+  header nav{margin-left:auto;display:flex;gap:1.5rem;font-size:.95rem}
+  header nav a{color:var(--legend-soft);text-decoration:none;border-bottom:1px solid transparent}
+  header nav a:hover,header nav a:focus-visible{color:var(--legend);border-bottom-color:var(--accent)}
+
+  /* ---- hero ---- */
+  .hero{padding:clamp(3rem,9vw,6rem) 0 clamp(2.5rem,6vw,4rem)}
+  .keys{display:flex;gap:clamp(.6rem,2vw,1.1rem);margin-bottom:clamp(2.25rem,6vw,3.25rem)}
+  .key{
+    width:clamp(74px,17vw,116px);
+    aspect-ratio:1/.92;
+    border:0;padding:0;
+    border-radius:11px;
+    background:linear-gradient(177deg,var(--cap) 0%,var(--cap) 62%,var(--cap-edge) 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.85) inset,
+      0 -2px 0 var(--cap-edge) inset,
+      0 4px 0 var(--deck-edge),
+      0 7px 14px var(--shadow);
+    color:var(--legend);
+    display:grid;place-items:center;
+    font-size:clamp(1.4rem,3.6vw,2.1rem);
+    cursor:pointer;
+    transition:transform .09s ease,box-shadow .09s ease;
+  }
+  .key:hover{transform:translateY(1px)}
+  .key:active,.key.down{
+    transform:translateY(4px);
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 0 0 var(--deck-edge),0 2px 5px var(--shadow);
+  }
+  .key:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+  .key.lit{color:var(--accent)}
+
+  h1{
+    font-weight:700;
+    font-size:clamp(2.1rem,6.4vw,3.9rem);
+    line-height:1.06;
+    letter-spacing:-.033em;
+    margin:0 0 1.1rem;
+    max-width:17ch;
+  }
+  .lede{font-size:clamp(1.05rem,2.4vw,1.28rem);color:var(--legend-soft);max-width:46ch;margin:0 0 2.25rem}
+
+  /* now-playing strip answers the key press */
+  .np{
+    display:inline-flex;align-items:center;gap:.7rem;
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:999px;
+    padding:.5rem 1.1rem .5rem .6rem;
+    font-size:.95rem;
+    margin-bottom:2.25rem;
+    opacity:0;transform:translateY(6px);
+    transition:opacity .45s ease,transform .45s ease;
+  }
+  .np.show{opacity:1;transform:none}
+  .np i{
+    width:26px;height:26px;border-radius:50%;
+    background:var(--accent);
+    display:grid;place-items:center;
+    font-style:normal;font-size:.7rem;color:#fff;
+  }
+  .np s{text-decoration:none;color:var(--legend-soft)}
+
+  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem}
+  .dl{
+    background:var(--accent);color:#fff;
+    font-weight:600;font-size:1.02rem;
+    text-decoration:none;
+    padding:.82rem 1.6rem;border-radius:9px;
+    box-shadow:0 2px 0 var(--accent-deep);
+    transition:transform .08s ease;
+  }
+  .dl:hover{transform:translateY(1px);box-shadow:0 1px 0 var(--accent-deep)}
+  .dl:focus-visible{outline:3px solid var(--legend);outline-offset:3px}
+  .meta{color:var(--legend-soft);font-size:.95rem}
+
+  /* ---- sections ---- */
+  section{padding:clamp(2.5rem,6vw,4rem) 0;border-top:1px solid var(--rule)}
+  h2{font-size:clamp(1.3rem,3vw,1.6rem);font-weight:600;letter-spacing:-.018em;margin:0 0 1.5rem}
+  p{max-width:64ch}
+  .cols{display:grid;gap:clamp(1.5rem,4vw,2.75rem);grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .cols h3{font-size:1.05rem;font-weight:600;margin:0 0 .5rem}
+  .cols p{color:var(--legend-soft);margin:0 0 .75rem;font-size:1rem}
+  .names{color:var(--legend)!important;font-size:1.06rem;line-height:1.5}
+
+  dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.4rem;font-size:1rem;align-items:baseline}
+  dt{color:var(--legend-soft);white-space:nowrap}
+  dd{margin:0}
+  .warn{border-left:3px solid var(--accent);padding-left:1.1rem;margin-top:1.75rem;color:var(--legend-soft)}
+  .warn b{color:var(--legend);font-weight:600}
+
+  a{color:inherit}
+  a.inline{color:var(--accent-deep);text-decoration-thickness:1px;text-underline-offset:2px}
+  @media (prefers-color-scheme:dark){a.inline{color:var(--accent-deep)}}
+
+  footer{border-top:1px solid var(--rule);padding:2.25rem 0 3.5rem;color:var(--legend-soft);font-size:.93rem}
+  footer p{margin:0 0 .5rem}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="assets/icon-256.png" alt="">
+    <b>Beardie</b>
+    <nav>
+      <a href="https://github.com/nikepol/beardie">Source</a>
+      <a href="https://github.com/nikepol/beardie/releases">Releases</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="keys">
+      <button class="key" id="prev" aria-label="Previous track">⏮</button>
+      <button class="key" id="play" aria-label="Play or pause">⏯</button>
+      <button class="key" id="next" aria-label="Next track">⏭</button>
+    </div>
+
+    <h1>Your media keys, pointed at whatever is playing.</h1>
+    <p class="lede">Beardie sits in the menu bar and sends play, next and previous to the tab or app actually making sound — not to Apple Music.</p>
+
+    <div class="np" id="np"><i>♪</i><span id="np-text">Paused <s>— SoundCloud, Safari</s></span></div>
+
+    <div class="cta">
+      <a class="dl" id="dl" href="https://github.com/nikepol/beardie/releases/latest">Download for macOS</a>
+      <span class="meta" id="meta">2.3.0 · 3.5 MB · macOS 12 or later</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>What it controls</h2>
+    <div class="cols">
+      <div>
+        <h3>In the browser</h3>
+        <p class="names">YouTube, Spotify, SoundCloud, Bandcamp, Deezer, Mixcloud, Netflix, Twitch, Apple&nbsp;Music&nbsp;Web, Pandora, Last.fm, Overcast, Pocket&nbsp;Casts, Coursera, and 72 more.</p>
+        <p>Safari, Chrome and Vivaldi.</p>
+      </div>
+      <div>
+        <h3>As native apps</h3>
+        <p class="names">Music, Spotify, VLC, VOX, Downcast, TIDAL.</p>
+        <p>Driven through Apple Events, so Beardie asks the app what is playing rather than faking keystrokes at it.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem">Each site is a small JavaScript file describing how to press play on it. Beardie fetches new and corrected ones from the upstream project, so a site can start working without a new version of the app.</p>
+  </section>
+
+  <section>
+    <h2>Picking the right tab</h2>
+    <p>With several tabs open, Beardie controls the one currently playing. If nothing is playing it falls back to the focused tab, and failing that, the first supported tab it knows about. You can also pin a tab deliberately with <b>⌘F8</b>, and jump back to whatever is playing with <b>⌘F6</b>.</p>
+  </section>
+
+  <section>
+    <h2>Installing</h2>
+    <dl>
+      <dt>Requires</dt><dd>macOS 12 or later, Apple silicon or Intel</dd>
+      <dt>Permission</dt><dd>Accessibility access, so the app can see the media keys</dd>
+      <dt>Size</dt><dd id="size">3.5 MB</dd>
+    </dl>
+    <div class="warn">
+      <p><b>The build is not signed.</b> There is no Apple Developer certificate behind it, so the first launch is blocked. Right-click the app and choose Open to get the prompt that lets you through. Every later launch is normal.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Beardie is a fork of <a class="inline" href="https://github.com/beardedspice/beardedspice">BeardedSpice</a>, updated for current macOS. Media strategies still come from the upstream project.</p>
+    <p><a class="inline" href="https://github.com/nikepol/beardie">github.com/nikepol/beardie</a></p>
+  </footer>
+
+</div>
+
+<script>
+// One orchestrated moment: the play key presses itself, the strip answers.
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var play = document.getElementById('play');
+  var np = document.getElementById('np');
+  var npText = document.getElementById('np-text');
+  var playing = false;
+
+  function toggle() {
+    playing = !playing;
+    play.classList.toggle('lit', playing);
+    npText.innerHTML = playing
+      ? 'Playing <s>— SoundCloud, Safari</s>'
+      : 'Paused <s>— SoundCloud, Safari</s>';
+    np.classList.add('show');
+  }
+
+  play.addEventListener('click', toggle);
+  document.getElementById('next').addEventListener('click', function () {
+    npText.innerHTML = 'Next track <s>— SoundCloud, Safari</s>';
+    np.classList.add('show');
+  });
+  document.getElementById('prev').addEventListener('click', function () {
+    npText.innerHTML = 'Previous track <s>— SoundCloud, Safari</s>';
+    np.classList.add('show');
+  });
+
+  if (reduce) { np.classList.add('show'); }
+  else {
+    setTimeout(function () {
+      play.classList.add('down');
+      setTimeout(function () { play.classList.remove('down'); toggle(); }, 130);
+    }, 700);
+  }
+})();
+
+// Keep version and size honest without editing this file on every release.
+fetch('https://api.github.com/repos/nikepol/beardie/releases/latest')
+  .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+  .then(function (rel) {
+    var dmg = (rel.assets || []).filter(function (a) { return /\.dmg$/.test(a.name); })[0];
+    var version = (rel.tag_name || '').replace(/^v/, '');
+    var mb = dmg ? (dmg.size / 1048576).toFixed(1) + ' MB' : null;
+    if (dmg) document.getElementById('dl').href = dmg.browser_download_url;
+    if (version) {
+      document.getElementById('meta').textContent =
+        version + (mb ? ' · ' + mb : '') + ' · macOS 12 or later';
+    }
+    if (mb) document.getElementById('size').textContent = mb;
+  })
+  .catch(function () { /* the hardcoded values above stay */ });
+</script>
+</body>
+</html>
