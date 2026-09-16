@@ -1,0 +1,22 @@
+release.sh
+  s_255d0e5e9ed1f1::t_7986535c0dd0c8 3-4,17-18,22,24-25,27-34,36,39-40,42-46,48,51
+.github/workflows/release.yml
+  s_255d0e5e9ed1f1::t_4239dbafa0bff2 1-15,17-48
+  s_255d0e5e9ed1f1::t_959dac8edb6081 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "926fb5510cc557ffb15685b9247c576849074a0f",
+  "prompts": {},
+  "sessions": {
+    "s_255d0e5e9ed1f1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "83c3a9e4-9883-428a-87c0-2e3df3e04ca0",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Nikita Polyakov <nikepol@me.com>"
+    }
+  }
+}
