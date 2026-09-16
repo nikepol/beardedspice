@@ -1,0 +1,23 @@
+README.md
+  s_255d0e5e9ed1f1::t_226701eefa7157 1,28,44
+docs/index.html
+  s_255d0e5e9ed1f1::t_89af33a723e51c 197-199,202-204,207
+  s_255d0e5e9ed1f1::t_e925bb7c7d9c7e 1-142,144-196,200-201,205-206,208-288
+  s_255d0e5e9ed1f1::t_c38d3b3a6d65ae 143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "21173489f8f99c4c1ccc4b2742360b2e3a3e894c",
+  "prompts": {},
+  "sessions": {
+    "s_255d0e5e9ed1f1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "83c3a9e4-9883-428a-87c0-2e3df3e04ca0",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Nikita Polyakov <nikepol@me.com>"
+    }
+  }
+}
