@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# by Andy Maloney
-# http://asmaloney.com/2013/07/howto/packaging-a-mac-os-x-application-using-a-dmg/
+# Builds Beardie in Release and packages it as a DMG.
+# Originally based on http://asmaloney.com/2013/07/howto/packaging-a-mac-os-x-application-using-a-dmg/
 
 set -e
 
@@ -11,49 +11,41 @@ if [ -d "$dir" ]; then
   cd "$dir"
 fi
 
-# set up your app name, version number, and background image file name
 APP_NAME="Beardie"
 VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Beardie/Beardie-Info.plist)
 
-# you should not need to change these
-APP_EXE="${APP_NAME}.app/Contents/MacOS/${APP_NAME}"
-
-VOL_NAME="${APP_NAME}-${VERSION}"   # volume name will be "SuperCoolApp-1.0.0"
-DMG_TMP="${VOL_NAME}-temp.dmg"
-DMG_FINAL="${VOL_NAME}.dmg"         # final DMG name will be "SuperCoolApp-1.0.0.dmg"
+VOL_NAME="${APP_NAME}-${VERSION}"
+DMG_FINAL="${VOL_NAME}.dmg"
 
 CWD=`pwd`
-RESOURCE_DIR="${CWD}/Beardie"
 BUILD_DIR="${CWD}/build/Release"
-STAGING_DIR="${CWD}/build/packaged"      # we copy all our stuff into this dir
+STAGING_DIR="${CWD}/build/packaged"
 
-DMG_BACKGROUND_IMG_NAME="beard.png"
+echo "Cleaning."
+rm -rf "${STAGING_DIR}" "${DMG_FINAL}"
 
-echo 'Cleaning.'
-# clear out any old data
-rm -rf "${STAGING_DIR}" "${DMG_TMP}" "${DMG_FINAL}"
+echo "Building ${APP_NAME} ${VERSION}."
+# SYMROOT puts the product in build/Release rather than DerivedData, so
+# BUILD_DIR above can find it.
+xcodebuild -workspace Beardie.xcworkspace \
+           -scheme Beardie \
+           -configuration Release \
+           SYMROOT="${CWD}/build" \
+           "$@"
 
-echo 'Building.'
-# build the project
-
-xcodebuild -workspace Beardie.xcworkspace -scheme Beardie -configuration Release
-
-echo 'Copying to staging directory.'
-# copy over the stuff we want in the final disk image to our staging dir
+echo "Staging."
 mkdir -p "${STAGING_DIR}"
 cp -rpf "${BUILD_DIR}/${APP_NAME}.app" "${STAGING_DIR}"
+# so the DMG window offers a drag-to-install target
+ln -s /Applications "${STAGING_DIR}/Applications"
 
-pushd "${STAGING_DIR}"
+echo "Creating ${DMG_FINAL}."
+hdiutil create -volname "${VOL_NAME}" \
+               -srcfolder "${STAGING_DIR}" \
+               -ov -format UDZO \
+               "${DMG_FINAL}"
 
-# . perform any other stripping/compressing of libs and executables
-
-popd
-
-# clean up
-echo 'Cleaning up.'
-rm -rf "${DMG_TMP}"
+echo "Cleaning up."
 rm -rf "${STAGING_DIR}"
 
-echo 'Done.'
-
-exit
+echo "Done: ${DMG_FINAL}"
