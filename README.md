@@ -1,4 +1,4 @@
-[![Release](https://github.com/nikepol/beardedspice/actions/workflows/release.yml/badge.svg)](https://github.com/nikepol/beardedspice/actions/workflows/release.yml)
+[![Release](https://github.com/nikepol/beardie/actions/workflows/release.yml/badge.svg)](https://github.com/nikepol/beardie/actions/workflows/release.yml)
 
 # About this fork
 
@@ -25,7 +25,7 @@ We've got you covered, give the [Shortcuts section](#keyboard-shortcuts) a look 
 
 ## Install
 
-Ready to give Beardie a spin? Grab the DMG from the [latest release](https://github.com/nikepol/beardedspice/releases/latest), drag it to Applications, and grant Accessibility access when asked (System Settings → Privacy & Security → Accessibility) — the media keys will not work until you do.
+Ready to give Beardie a spin? Grab the DMG from the [latest release](https://github.com/nikepol/beardie/releases/latest), drag it to Applications, and grant Accessibility access when asked (System Settings → Privacy & Security → Accessibility) — the media keys will not work until you do.
 
 macOS 12 or later required. That floor comes from the toolchain: Xcode 27 refuses deployment targets below 12.0.
 
@@ -41,7 +41,7 @@ If you're using Safari (≥9.1.1), you should enable developer preference. [See 
 Beardie tries to automatically guess which tab it should control for you. When you press any media key or Beardie shortcut with Beardie open, it will automatically control the site currently playing media, if you have no playing sites, it will try to control the currently focused tab (if it is one of our supported sites) if Beardie failed to do either, it will automatically control the first.
 
 ### Updates
-Beardie does not update itself — there is no Sparkle or equivalent in the app, so new versions are downloaded from the [releases page](https://github.com/nikepol/beardedspice/releases). Media strategies are a separate matter and do refresh in place; see below.
+Beardie does not update itself — there is no Sparkle or equivalent in the app, so new versions are downloaded from the [releases page](https://github.com/nikepol/beardie/releases). Media strategies are a separate matter and do refresh in place; see below.
 
 ### Up to Date Media Strategies
 First, what is a Media Strategy? This is what we call a [template](https://github.com/beardedspice/beardedspice/blob/master/template-explained.js) with custom javascript aimed at a specific website, allowing the Beardie program to control it with the media keys.
