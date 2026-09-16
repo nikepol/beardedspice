@@ -1,22 +1,22 @@
 //
 //  BSSharedDefaults.m
-//  Beardie
+//  BeardieMusic
 //
 //  Created by Roman Sokolov on 05.03.16.
-//  Copyright © 2016 Beardie. All rights reserved.
+//  Copyright © 2016 BeardieMusic. All rights reserved.
 //
 
 #import "BSSharedDefaults.h"
 
-#define HOST_APP_BUNDLE_ID          @"com.beardie.Beardie"
+#define HOST_APP_BUNDLE_ID          @"com.beardiemusic.BeardieMusic"
 
-NSString *const BeardiePlayPauseShortcut = @"BeardiePlayPauseShortcut";
-NSString *const BeardieNextTrackShortcut = @"BeardieNextTrackShortcut";
-NSString *const BeardiePreviousTrackShortcut = @"BeardiePreviousTrackShortcut";
-NSString *const BeardieActiveTabShortcut = @"BeardieActiveTabShortcut";
-NSString *const BeardieFavoriteShortcut = @"BeardieFavoriteShortcut";
-NSString *const BeardieNotificationShortcut = @"BeardieNotificationShortcut";
-NSString *const BeardieActivatePlayingTabShortcut = @"BeardieActivatePlayingTabShortcut";
-NSString *const BeardiePlayerNextShortcut = @"BeardiePlayerNextShortcut";
-NSString *const BeardiePlayerPreviousShortcut = @"BeardiePlayerPreviousShortcut";
+NSString *const BeardieMusicPlayPauseShortcut = @"BeardieMusicPlayPauseShortcut";
+NSString *const BeardieMusicNextTrackShortcut = @"BeardieMusicNextTrackShortcut";
+NSString *const BeardieMusicPreviousTrackShortcut = @"BeardieMusicPreviousTrackShortcut";
+NSString *const BeardieMusicActiveTabShortcut = @"BeardieMusicActiveTabShortcut";
+NSString *const BeardieMusicFavoriteShortcut = @"BeardieMusicFavoriteShortcut";
+NSString *const BeardieMusicNotificationShortcut = @"BeardieMusicNotificationShortcut";
+NSString *const BeardieMusicActivatePlayingTabShortcut = @"BeardieMusicActivatePlayingTabShortcut";
+NSString *const BeardieMusicPlayerNextShortcut = @"BeardieMusicPlayerNextShortcut";
+NSString *const BeardieMusicPlayerPreviousShortcut = @"BeardieMusicPlayerPreviousShortcut";
 

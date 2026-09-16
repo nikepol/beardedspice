@@ -1,14 +1,14 @@
 #!/bin/bash
 # clean up the previous installation so we can test it again.
 
-killall Beardie
+killall BeardieMusic
 # Remove files
-sudo rm -f ~/Library/Preferences/com.beardie.Beardie.plist
-sudo rm -rf ~/Library/Application\ Support/Beardie
-sudo rm -rf /Applications/Beardie.app
+sudo rm -f ~/Library/Preferences/com.beardiemusic.BeardieMusic.plist
+sudo rm -rf ~/Library/Application\ Support/BeardieMusic
+sudo rm -rf /Applications/BeardieMusic.app
 
 # Reboot the notifications service so it realizes that the app is gone
 launchctl stop com.apple.usernoted
 launchctl start com.apple.usernoted
 
-echo \# Beardie has been uninstalled
+echo \# BeardieMusic has been uninstalled
