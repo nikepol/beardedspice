@@ -1,9 +1,9 @@
 //
 //  BSTimeout.m
-//  BeardedSpice
+//  Beardie
 //
 //  Created by Roman Sokolov on 12.02.16.
-//  Copyright © 2016 BeardedSpice. All rights reserved.
+//  Copyright © 2016 Beardie. All rights reserved.
 //
 
 #import "BSTimeout.h"
