@@ -1,12 +1,14 @@
-[![travis-ci](https://travis-ci.org/beardedspice/beardedspice.png)](https://travis-ci.org/beardedspice/beardedspice)
+[![Release](https://github.com/nikepol/beardedspice/actions/workflows/release.yml/badge.svg)](https://github.com/nikepol/beardedspice/actions/workflows/release.yml)
 
-# Before everything
+# About this fork
 
-Read this conversation: [#899](https://github.com/beardedspice/beardedspice/issues/899)
+Beardie is a fork of [BeardedSpice](https://github.com/beardedspice/beardedspice), updated to build and run on current macOS. The app was renamed, so its bundle identifier changed from `com.beardedspice.BeardedSpice` to `com.beardie.Beardie` — macOS treats it as a new application, which means Accessibility has to be granted again and settings from a BeardedSpice install do not carry over.
+
+Media strategies are still fetched from the upstream repository, so support for new sites lands here automatically.
 
 # Common Issues
 
-It's asked that anyone with an issue check the [Wiki Section](https://github.com/beardedspice/beardedspice/wiki) before posting a new issue.
+Check the upstream [Wiki](https://github.com/beardedspice/beardedspice/wiki) before opening an issue — most of it still applies.
 
 # Users Guide
 
@@ -23,9 +25,11 @@ We've got you covered, give the [Shortcuts section](#keyboard-shortcuts) a look 
 
 ## Install
 
-Ready to give Beardie a spin? You can download the [latest release here](https://raw.github.com/beardedspice/beardedspice/distr/publish/releases/BeardedSpice-latest.zip)*, or find a full list of all our [previously released binaries here](https://github.com/beardedspice/beardedspice/releases).
+Ready to give Beardie a spin? Grab the DMG from the [latest release](https://github.com/nikepol/beardedspice/releases/latest), drag it to Applications, and grant Accessibility access when asked (System Settings → Privacy & Security → Accessibility) — the media keys will not work until you do.
 
-*Mac OS X 10.10 or greater required.
+macOS 12 or later required. That floor comes from the toolchain: Xcode 27 refuses deployment targets below 12.0.
+
+Releases are built in CI without a Developer ID certificate, so they are unsigned. Gatekeeper will refuse the first launch — right-click the app and choose *Open* to get the override prompt.
 
 If you're using Safari (≥9.1.1), you should enable developer preference. [See detailed guide how to do it.](https://github.com/beardedspice/beardedspice/wiki/Wont-Work-issue-after-Safari-Update-(9.1.1-and-later))
 
@@ -36,8 +40,8 @@ If you're using Safari (≥9.1.1), you should enable developer preference. [See 
 
 Beardie tries to automatically guess which tab it should control for you. When you press any media key or Beardie shortcut with Beardie open, it will automatically control the site currently playing media, if you have no playing sites, it will try to control the currently focused tab (if it is one of our supported sites) if Beardie failed to do either, it will automatically control the first.
 
-### Automatic Updates
-No more checking for new releases on our website, Beardie will automatically notify you when a new release is available.
+### Updates
+Beardie does not update itself — there is no Sparkle or equivalent in the app, so new versions are downloaded from the [releases page](https://github.com/nikepol/beardedspice/releases). Media strategies are a separate matter and do refresh in place; see below.
 
 ### Up to Date Media Strategies
 First, what is a Media Strategy? This is what we call a [template](https://github.com/beardedspice/beardedspice/blob/master/template-explained.js) with custom javascript aimed at a specific website, allowing the Beardie program to control it with the media keys.
@@ -166,6 +170,37 @@ From the preferences tab, uncheck any types of webpages that you don't want Bear
 
 #### Don't see your favorite site in the list ?
 No Problem, Just [submit an issue](https://github.com/beardedspice/beardedspice/issues/new?title=[App%20Support]).
+
+## Building from source
+
+Requires Xcode and CocoaPods.
+
+```sh
+pod install
+open Beardie.xcworkspace
+```
+
+Build the `Beardie` scheme. Always open the `.xcworkspace`, never the `.xcodeproj` — the pods are not linked otherwise.
+
+To produce a DMG the way CI does:
+
+```sh
+./release.sh
+```
+
+That builds Release, stages the app with an `/Applications` symlink, and writes `Beardie-<version>.dmg` next to the script. Pass extra arguments straight through to `xcodebuild`, for example `./release.sh CODE_SIGNING_ALLOWED=NO` to build without a signing identity.
+
+## Cutting a release
+
+Bump `CFBundleShortVersionString` and `CFBundleVersion` in `Beardie/Beardie-Info.plist`, then tag:
+
+```sh
+git tag v2.3.0 && git push origin v2.3.0
+```
+
+The [release workflow](.github/workflows/release.yml) verifies the tag matches the version in `Info.plist`, builds the DMG and publishes it as a GitHub Release. A mismatched tag fails the build rather than shipping a mislabelled binary.
+
+The app icon lives in `Beardie/Beardie.icon` and is edited with Icon Composer (bundled with Xcode). `actool` compiles it into both the layered form macOS 26+ renders and the classic icon sizes older versions use.
 
 #### Want to Contribute?
 Please do! Contributions are the lifeblood of the project, and yours helps keep us moving forward.
