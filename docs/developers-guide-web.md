@@ -10,9 +10,9 @@ pod setup
 pod install
 ```
 
-*Always* use `Beardie.xcworkspace` for development, *NOT* `Beardie.xcodeproject`
+*Always* use `BeardieMusic.xcworkspace` for development, *NOT* `BeardieMusic.xcodeproject`
 
-Beardie is built with [SPMediaKeyTap](https://github.com/nevyn/SPMediaKeyTap) and works well with other applications listening to media key events.
+BeardieMusic is built with [SPMediaKeyTap](https://github.com/nevyn/SPMediaKeyTap) and works well with other applications listening to media key events.
 
 
 ## Writing a *Media Strategy*
@@ -22,7 +22,7 @@ Media controllers are written as [strategies](https://github.com/beardedspice/be
 ```javascript
 //
 //  NewStrategyName.js
-//  Beardie
+//  BeardieMusic
 //
 //  Created by You on Today's Date.
 //  Copyright (c) 2015-2026 GPL v3 http://www.gnu.org/licenses/gpl.html

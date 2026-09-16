@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Builds Beardie in Release and packages it as a DMG.
+# Builds BeardieMusic in Release and packages it as a DMG.
 # Originally based on http://asmaloney.com/2013/07/howto/packaging-a-mac-os-x-application-using-a-dmg/
 
 set -e
@@ -11,8 +11,8 @@ if [ -d "$dir" ]; then
   cd "$dir"
 fi
 
-APP_NAME="Beardie"
-VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" Beardie/Beardie-Info.plist)
+APP_NAME="BeardieMusic"
+VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" BeardieMusic/BeardieMusic-Info.plist)
 
 VOL_NAME="${APP_NAME}-${VERSION}"
 DMG_FINAL="${VOL_NAME}.dmg"
@@ -27,8 +27,8 @@ rm -rf "${STAGING_DIR}" "${DMG_FINAL}"
 echo "Building ${APP_NAME} ${VERSION}."
 # SYMROOT puts the product in build/Release rather than DerivedData, so
 # BUILD_DIR above can find it.
-xcodebuild -workspace Beardie.xcworkspace \
-           -scheme Beardie \
+xcodebuild -workspace BeardieMusic.xcworkspace \
+           -scheme BeardieMusic \
            -configuration Release \
            SYMROOT="${CWD}/build" \
            "$@"

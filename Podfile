@@ -1,17 +1,17 @@
 platform :osx, '12.0'
-project 'Beardie'
+project 'BeardieMusic'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'BeardieControllers' do
+target 'BeardieMusicControllers' do
     pod 'MASShortcut', '~> 2.3.3'
 
-    target 'Beardie' do
+    target 'BeardieMusic' do
         pod 'MASPreferences', '= 1.1.4'
         pod 'FMDB', '~> 2.6.2'
 
         # all pods for tests should ONLY go here
-        target 'BeardieTests' do
+        target 'BeardieMusicTests' do
             pod 'Kiwi'
             # pod 'OCMock'
             pod 'VCRURLConnection'

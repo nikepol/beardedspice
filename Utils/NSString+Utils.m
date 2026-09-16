@@ -1,6 +1,6 @@
 //
 //  NSString+Utils.m
-//  Beardie
+//  BeardieMusic
 //
 //  Created by Roman Sokolov on 14.03.15.
 //  Copyright (c) 2015 Tyler Rhodes / Jose Falcon. All rights reserved.

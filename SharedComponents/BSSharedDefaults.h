@@ -1,19 +1,19 @@
 //
 //  BSSharedDefaults.h
-//  Beardie
+//  BeardieMusic
 //
 //  Created by Roman Sokolov on 05.03.16.
-//  Copyright © 2016 Beardie. All rights reserved.
+//  Copyright © 2016 BeardieMusic. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-extern NSString *const BeardiePlayPauseShortcut;
-extern NSString *const BeardieNextTrackShortcut;
-extern NSString *const BeardiePreviousTrackShortcut;
-extern NSString *const BeardieActiveTabShortcut;
-extern NSString *const BeardieFavoriteShortcut;
-extern NSString *const BeardieNotificationShortcut;
-extern NSString *const BeardieActivatePlayingTabShortcut;
-extern NSString *const BeardiePlayerNextShortcut;
-extern NSString *const BeardiePlayerPreviousShortcut;
+extern NSString *const BeardieMusicPlayPauseShortcut;
+extern NSString *const BeardieMusicNextTrackShortcut;
+extern NSString *const BeardieMusicPreviousTrackShortcut;
+extern NSString *const BeardieMusicActiveTabShortcut;
+extern NSString *const BeardieMusicFavoriteShortcut;
+extern NSString *const BeardieMusicNotificationShortcut;
+extern NSString *const BeardieMusicActivatePlayingTabShortcut;
+extern NSString *const BeardieMusicPlayerNextShortcut;
+extern NSString *const BeardieMusicPlayerPreviousShortcut;

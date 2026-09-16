@@ -1,9 +1,9 @@
 //
 //  BSTimeout.h
-//  Beardie
+//  BeardieMusic
 //
 //  Created by Roman Sokolov on 12.02.16.
-//  Copyright © 2016 Beardie. All rights reserved.
+//  Copyright © 2016 BeardieMusic. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
